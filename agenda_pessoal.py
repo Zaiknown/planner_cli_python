@@ -528,7 +528,7 @@ def excluir_compromisso(agenda):
     
         texto_prioridade = ""
         
-        for chave, info in agenda.items():
+        for chave, info in sorted(agenda.items()):
             
             if info['prioridade'] == True:
                 texto_prioridade = "Urgente"
