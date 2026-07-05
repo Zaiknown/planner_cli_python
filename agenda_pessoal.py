@@ -64,7 +64,7 @@ def mostrar_menu(agenda):
             elif opcao == 10:
                 filtrar_por_periodo(agenda)
             elif opcao > 10 or opcao < 1:
-                print(f"\n#### {YELLOW}AVISO{RESET} ####")
+                print(f"\n#### {YELLOW}AVISO{RESET} ####\n")
                 print(f"\n {RED}Você digitou uma opção que não existe, tente novamente!{RESET}\n")
                 continue
             
@@ -426,7 +426,7 @@ def filtra_por_data(agenda):
         if encontrou:
             print("-" * 40)
         else:         
-            print(f"\n{YELLOW}#### AVISO ####{RESET}")
+            print(f"\n{YELLOW}#### AVISO ####{RESET}\n")
             print(f"{RED}Não há nenhum compromisso cadastrado nesta data!{RESET}\n")
             
         os.system("pause")
@@ -453,7 +453,8 @@ def listar_prioritarios(agenda):
             print(f"Horário: {info['hora_inicio']:02d}h às {info['hora_termino']:02d}h")
             print(f"Descrição: {info['descricao']}")
             print(f"Prioridade: {texto_prioridade}")
-            print("-" * 40)
+        print("-" * 40)
+    os.system('pause')
     if not encontrou:
         
         print("\n")
@@ -508,7 +509,7 @@ def filtra_por_palavra_chave(agenda):
                     
             if not encontrou:
                 
-                print(f"\n{YELLOW}#### AVISO ####{RESET}")
+                print(f"\n{YELLOW}#### AVISO ####{RESET}\n")
                 print(f"{RED}Não há nenhum compromisso com essa palavra na descrição!{RESET}\n")
                 
             os.system("pause")
