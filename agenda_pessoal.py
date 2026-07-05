@@ -453,12 +453,14 @@ def listar_prioritarios(agenda):
             print(f"Horário: {info['hora_inicio']:02d}h às {info['hora_termino']:02d}h")
             print(f"Descrição: {info['descricao']}")
             print(f"Prioridade: {texto_prioridade}")
-        print("-" * 40)
-    os.system("pause")
-        
+            print("-" * 40)
     if not encontrou:
         
-        print("Você não tem nenhum compromisso prioritário na agenda!")
+        print("\n")
+        print("-" * 40)
+        print(f"\n{RED}Você não tem nenhum compromisso prioritário na agenda!{RESET}\n")
+        print("-" * 40, "\n")
+        os.system('pause')
 
 def filtra_por_palavra_chave(agenda):
     
